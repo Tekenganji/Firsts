@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      <div>
+<div id="header">
+<img id="img" src="logo11_28_204046.png">
+</div>
+<h1>welcome to Textralight </h1>
+        <center><form action="login.php" method="POST" >
+<input id="name" type="name" name="name" placeholder="Enter your name" required>
+<input id="pass" type="password" name="pass" placeholder="Enter your password" required>
+<img id="eyes" onclick="showpass()" src="logo11_29_154638.png">
+<img id="eye"  onclick="hidepass()" src="logo11_29_15503.png">
+<input id="btn" onclick='save()' type="submit" value="LOGIN">
+
+<a href="sign up.html">Create a new account </a>
+</form></center>
+      </div>
+    </body>
+
+
+<style>
+*{
+margin: 0;
+padding: 0;
+}
+body{
+padding-top: 90px;
+background: #74FFBB;
+} 
+
+a{
+text-decoration: none;
+float: left;
+font-size: 25px;
+font-weight: 100;
+margin-top: 80px;
+}
+#eye,
+#eyes{
+width: 40px;
+position: absolute;
+right: 45px;
+top: 335px;
+}
+#eye{
+display: none;
+}
+h1{
+color:#fff;
+}
+#passbtn{
+float: left;
+
+}
+#btn{
+margin-top: 70px;
+font-size: 20px;
+padding: 15px;
+border: none;
+border-bottom: 3px solid black;
+border-radius: 30px;
+}
+#header{
+display:grid ;
+grid-template-columns: 1fr 1fr;
+position: fixed;
+top:0;
+width: 100%;
+background:#008063;
+height: 8%;
+}
+#header #img{
+border: 2px narrow black;
+height: 10vh;
+width: 90%;
+justify-content: bottom;
+}
+input{
+display: block;
+
+}
+#pass,
+#name{
+margin-top: 70px;
+font-size: 20px;
+padding: 15px;
+border: none;
+border-bottom: 3px solid black;
+border-radius: 30px;
+}
+</style>
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyDBZ_tfJXN0MnN6xOB_CMKxLSR8PD8YxTA",
+  authDomain: "logindb-77fa5.firebaseapp.com",
+  databaseURL: "https://logindb-77fa5-default-rtdb.firebaseio.com",
+  projectId: "logindb-77fa5",
+  storageBucket: "logindb-77fa5.appspot.com",
+  messagingSenderId: "1072924058598",
+  appId: "1:1072924058598:web:20ea0f8d11b6abbce96c27"
+};
+
+function save(){
+	
+	var database=firebase.database();
+	
+	var name =document.getElementById('name').value;
+}
+</html>
